@@ -1,17 +1,100 @@
 # Project Atlas
 
-This repository houses Project Atlas.
+Project Atlas is a production-ready portfolio and content platform built with Next.js, TypeScript, Tailwind CSS, next-themes, Framer Motion, and Lucide React.
+
+## Project Overview
+
+A modern Next.js application using the App Router and a src-first architecture.
+
+### Technology Stack
+
+- Next.js (App Router)
+- TypeScript
+- Tailwind CSS
+- next-themes
+- Framer Motion
+- Lucide React
+- ESLint
+- Prettier
+
+## Architecture
+
+Application source code lives inside the `src/` directory.
+
+Static assets are stored in the `public/` directory.
+
+Documentation is maintained in the `docs/` directory.
 
 ## Public Assets
 
-The `public/` directory contains production-ready static assets (images, icons, fonts, logos, favicons, and social preview images) organized for scalability and clarity. See `public/README.md` for a high-level overview and each subfolder's README for specific responsibilities and conventions.
+The `public/` directory contains production-ready static assets.
 
-Guidelines (summary)
+```
+public/
+├── images/
+├── icons/
+├── fonts/
+├── logos/
+├── favicon/
+└── social/
+```
 
-- Use optimized, web-friendly formats (WebP/AVIF for photos, SVG for vectors).
-- Store design source files (Figma, PSD, AI) outside the `public/` directory — `public/` is for ready-to-serve assets only.
-- Name files semantically using kebab-case and include size/context when helpful (e.g., `project-atlas-hero-1600x900.webp`).
-- Keep font licenses alongside font files or in a DESIGN.md.
-- Do not commit large, unoptimized source files or working design assets here.
+Guidelines:
 
-This repository now includes a canonical public asset structure on branch `chore/public-assets-structure`. Open a PR to merge the structure into the default branch when ready.
+- Use optimized formats such as WebP, AVIF and SVG.
+- Do not commit design source files (PSD, AI, Figma).
+- Use semantic kebab-case filenames.
+- Keep font licenses with font files when applicable.
+
+## Folder Structure
+
+See `src/README.md` for the complete application structure.
+
+## Local Development
+
+```bash
+npm install
+npm run dev
+npm run typecheck
+npm run lint
+npm run build
+```
+
+## Development Workflow
+
+- Create one feature branch per sprint.
+- Open a Pull Request into `main`.
+- Run lint, typecheck and build before merging.
+
+## Documentation
+
+Additional documentation is available in the `docs/` directory:
+
+- Architecture
+- Coding Standards
+- Design System
+- Deployment
+- Roadmap
+
+## Roadmap
+
+- Foundation ✅
+- Design System
+- Component Library
+- Hero
+- Homepage
+- Navigation
+- Portfolio
+- Journal
+- Workspace
+- Search
+- Theme Engine
+- Motion System
+- Internationalization
+- Dashboard
+- Optimization
+- Production Release
+
+## Contributing
+
+Please create feature branches from `main` and submit Pull Requests for review.
