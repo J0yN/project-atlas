@@ -1,54 +1,100 @@
 # Project Atlas
 
-Project Atlas — foundation scaffold (App Router + TypeScript + Tailwind + next-themes + Framer Motion + Lucide React).
+Project Atlas is a production-ready portfolio and content platform built with Next.js, TypeScript, Tailwind CSS, next-themes, Framer Motion, and Lucide React.
 
-This branch (sprint-01-foundation) contains the initial, production-minded application foundation. It is intentionally minimal: a strongly typed, accessible landing page and a modular folder structure ready for features.
+## Project Overview
 
-## Project overview
-A modern Next.js application scaffolded to use the App Router and a src-first architecture. Focus areas:
-- App Router with server-first layouts and client providers
-- TypeScript with strict checks
-- Tailwind CSS for utility-first styling
-- next-themes for light/dark theming (class strategy)
-- Framer Motion and Lucide for animations and icons
-- ESLint + Prettier for consistent code quality
+A modern Next.js application using the App Router and a src-first architecture.
+
+### Technology Stack
+
+- Next.js (App Router)
+- TypeScript
+- Tailwind CSS
+- next-themes
+- Framer Motion
+- Lucide React
+- ESLint
+- Prettier
 
 ## Architecture
-Top-level source: `src/` — everything application-specific lives under this directory. Production build and public assets served from `public/` (left intact).
 
-## Folder structure
-See `src/README.md` for a detailed breakdown.
+Application source code lives inside the `src/` directory.
 
-## Setup (local)
-1. Checkout the branch:
+Static assets are stored in the `public/` directory.
 
-   git checkout sprint-01-foundation
+Documentation is maintained in the `docs/` directory.
 
-2. Install dependencies:
+## Public Assets
 
-   npm install
+The `public/` directory contains production-ready static assets.
 
-3. Run development server:
+```
+public/
+├── images/
+├── icons/
+├── fonts/
+├── logos/
+├── favicon/
+└── social/
+```
 
-   npm run dev
+Guidelines:
 
-4. Typecheck and lint:
+- Use optimized formats such as WebP, AVIF and SVG.
+- Do not commit design source files (PSD, AI, Figma).
+- Use semantic kebab-case filenames.
+- Keep font licenses with font files when applicable.
 
-   npm run typecheck
-   npm run lint
+## Folder Structure
 
-## Development workflow
-- Make feature branches off `main` or `sprint-01-foundation` during early work.
-- Keep components modular under `src/components`.
-- Add providers to `src/providers`.
-- Maintain public assets in `public/`.
+See `src/README.md` for the complete application structure.
+
+## Local Development
+
+```bash
+npm install
+npm run dev
+npm run typecheck
+npm run lint
+npm run build
+```
+
+## Development Workflow
+
+- Create one feature branch per sprint.
+- Open a Pull Request into `main`.
+- Run lint, typecheck and build before merging.
+
+## Documentation
+
+Additional documentation is available in the `docs/` directory:
+
+- Architecture
+- Coding Standards
+- Design System
+- Deployment
+- Roadmap
 
 ## Roadmap
-- Add CI for lint/typecheck/build
-- Add automated image optimization on upload
-- Implement content/modules (portfolio, journal)
+
+- Foundation ✅
+- Design System
+- Component Library
+- Hero
+- Homepage
+- Navigation
+- Portfolio
+- Journal
+- Workspace
+- Search
+- Theme Engine
+- Motion System
+- Internationalization
+- Dashboard
+- Optimization
+- Production Release
 
 ## Contributing
-- Fork, create a branch, and open a PR targeting `main`.
-- Run lint and typecheck before opening PRs.
 
+Please create feature branches from `main` and submit Pull Requests for review.
