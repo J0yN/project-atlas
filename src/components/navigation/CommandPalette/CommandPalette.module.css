@@ -1,0 +1,7 @@
+.overlay { position:fixed; inset:0; display:flex; align-items:center; justify-content:center; z-index:var(--ds-z-index-modal,2000); background: var(--ds-overlay, transparent); }
+.panel { width: min(920px, 96%); background: var(--ds-color-surface, transparent); border-radius: var(--ds-radius-md, 0.25rem); padding: var(--ds-space-16,1rem); box-shadow: var(--ds-shadow-lg, none); }
+.header { display:flex; justify-content:space-between; align-items:center; margin-bottom: var(--ds-space-12, 0.75rem); }
+.list { list-style:none; padding:0; margin:0; max-height: 60vh; overflow:auto; }
+.item { width:100%; text-align:left; padding: var(--ds-space-8,0.5rem); border: none; background: none; }
+.empty { padding: var(--ds-space-8,0.5rem); color: var(--ds-color-muted, currentColor); }
+@media (prefers-reduced-motion: reduce) { .panel { transition: none; } }

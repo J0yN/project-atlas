@@ -1,5 +1,4 @@
-/* Footer.module.css */
-.root { padding: var(--ds-space-24, 1.5rem) 0; border-top: 1px solid var(--ds-color-border, rgba(0,0,0,0.04)); }
+.root { padding: var(--ds-space-24, 1.5rem) 0; border-top: 1px solid var(--ds-color-border, transparent); }
 .inner { display:flex; justify-content:space-between; align-items:center; gap: var(--ds-space-12, 0.75rem); }
 .nav { display:flex; gap: var(--ds-space-12, 0.75rem); }
 .link { color: var(--ds-color-foreground, currentColor); text-decoration:none; }

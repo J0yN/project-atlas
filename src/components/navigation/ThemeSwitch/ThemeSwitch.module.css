@@ -1,0 +1,2 @@
+.root { padding: var(--ds-space-8, 0.5rem); border-radius: var(--ds-radius-sm, 0.25rem); border: 1px solid var(--ds-color-border, transparent); background: var(--ds-color-surface, transparent); }
+.label { font-size: var(--ds-typography-small, 0.875rem); color: var(--ds-color-foreground, currentColor); }

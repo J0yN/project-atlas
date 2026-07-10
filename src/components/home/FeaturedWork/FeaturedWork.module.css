@@ -1,6 +1,4 @@
-/* FeaturedWork.module.css */
-.root {
-}
+.root { padding-top: var(--ds-space-40, 2.5rem); padding-bottom: var(--ds-space-40, 2.5rem); }
 
 .header {
   margin-bottom: var(--ds-space-16, 1rem);
@@ -24,15 +22,15 @@
 .card {
   background: var(--ds-color-surface, transparent);
   padding: var(--ds-space-16, 1rem);
-  border-radius: var(--ds-radius-md, 0);
+  border-radius: var(--ds-radius-md, 0.25rem);
   box-shadow: var(--ds-shadow-sm, none);
   display: flex;
   flex-direction: column;
 }
 
 .cardVisual {
-  height: 160px;
-  border-radius: var(--ds-radius-sm, 4px);
+  height: 10rem;
+  border-radius: var(--ds-radius-sm, 0.25rem);
   background: linear-gradient(135deg, var(--ds-color-accent, transparent), var(--ds-color-primary, transparent));
   margin-bottom: var(--ds-space-12, 0.75rem);
 }
