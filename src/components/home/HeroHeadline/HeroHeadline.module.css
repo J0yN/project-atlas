@@ -1,0 +1,4 @@
+/* HeroHeadline.module.css */
+.root {
+  color: var(--ds-color-foreground, currentColor);
+}

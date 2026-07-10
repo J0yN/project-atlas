@@ -1,0 +1,26 @@
+/*
+  Hero.module.css
+  Uses CSS custom properties with fallbacks to ensure resilience before token->CSS build runs.
+*/
+
+.root {
+  position: relative;
+  background-color: var(--ds-color-background, transparent);
+  color: var(--ds-color-foreground, currentColor);
+}
+
+.inner {
+  display: grid;
+  gap: var(--ds-space-24, 1rem);
+  grid-template-columns: var(--pa-hero-grid, repeat(auto-fit, minmax(40rem, 1fr)));
+  align-items: center;
+}
+
+.contentWrapper {
+  box-sizing: border-box;
+}
+
+.visualWrapper {
+  display: block;
+  min-height: var(--pa-hero-visual-min-height, 260px);
+}
