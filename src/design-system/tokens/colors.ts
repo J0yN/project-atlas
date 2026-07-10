@@ -1,8 +1,9 @@
 /**
  * Design System - Colors (semantic tokens only)
  *
- * This module exports only semantic color token types and key names.
- * Actual theme mappings (light/dark) live under ../themes to keep files independent.
+ * This module exports semantic color token keys and types. It deliberately does
+ * not export concrete color values or palettes — themes map these semantic
+ * keys to concrete palette values.
  */
 
 /**
@@ -34,12 +35,8 @@ export type SemanticColorKey = (typeof semanticColorKeys)[number];
 
 /**
  * SemanticColors maps each semantic key to a CSS color string (hex, rgb, or css variable).
+ * Use these types when building theme objects to ensure complete mappings.
  */
 export type SemanticColors = {
   [K in SemanticColorKey]: string;
 };
-
-/**
- * Top-level export for semantic color tokens. Not a concrete theme—used for typing.
- */
-export const colors = {} as SemanticColors;
