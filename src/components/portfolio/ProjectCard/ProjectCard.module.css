@@ -1,0 +1,27 @@
+.root {
+  background: var(--ds-color-surface, transparent);
+  border-radius: var(--ds-radius-md, 0.25rem);
+  box-shadow: var(--ds-shadow-sm, none);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 200ms ease, box-shadow 200ms ease;
+}
+
+.root:focus-within, .root:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--ds-shadow-md, none);
+}
+
+.root[aria-pressed] { transform: none; }
+
+.body { padding: var(--ds-space-12, 0.75rem); display:flex; flex-direction:column; gap: var(--ds-space-8, 0.5rem); }
+
+.variant-small { width: 100%; }
+.variant-medium { width: 100%; }
+.variant-large { width: 100%; }
+.variant-featured { grid-column: 1 / -1; }
+
+@media (prefers-reduced-motion: reduce) {
+  .root { transition: none; }
+}

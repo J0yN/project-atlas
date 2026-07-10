@@ -1,0 +1,3 @@
+.root { display:flex; gap: var(--ds-space-8,0.5rem); margin-top: var(--ds-space-8,0.5rem); }
+.primary { background: var(--ds-color-primary, transparent); color: var(--ds-color-on-primary, currentColor); padding: var(--ds-space-8,0.5rem); border-radius: var(--ds-radius-sm,0.25rem); text-decoration:none; }
+.secondary { background: var(--ds-color-surface, transparent); padding: var(--ds-space-8,0.5rem); border-radius: var(--ds-radius-sm,0.25rem); text-decoration:none; }
