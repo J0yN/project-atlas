@@ -1,0 +1,4 @@
+.root { display:flex; gap: var(--ds-space-8,0.5rem); align-items:center; }
+.option { display:inline-flex; align-items:center; gap: var(--ds-space-4,0.25rem); }
+.label { color: var(--ds-color-foreground, currentColor); }
+input { width:16px; height:16px; }
