@@ -1,0 +1,6 @@
+.root { font-size: var(--ds-typography-small, 0.875rem); }
+.list { list-style:none; display:flex; gap: var(--ds-space-8, 0.5rem); padding:0; margin:0; align-items:center; }
+.item { display:flex; align-items:center; gap: var(--ds-space-8,0.5rem); }
+.link { color: var(--ds-color-foreground, currentColor); text-decoration:none; }
+.current { color: var(--ds-color-muted, currentColor); }
+.sep { color: var(--ds-color-muted, currentColor); margin: 0 var(--ds-space-4, 0.25rem); }
