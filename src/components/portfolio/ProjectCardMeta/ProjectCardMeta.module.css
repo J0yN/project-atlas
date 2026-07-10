@@ -1,0 +1,3 @@
+.root { display:flex; gap: var(--ds-space-8,0.5rem); align-items:center; flex-wrap:wrap; font-size: var(--ds-typography-small, 0.875rem); color: var(--ds-color-muted, currentColor); }
+.metaItem { display:inline-block; }
+.metaSep { opacity: 0.6; }
