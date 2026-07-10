@@ -1,0 +1,43 @@
+/* HeroBackground.module.css
+   Layers: gradient base, grid overlay, accents (masked), noise placeholder
+   All color/opacity references use CSS variables with safe fallbacks.
+*/
+
+.root {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.layer {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, var(--ds-color-surface, transparent) 0%, var(--ds-color-background, transparent) 100%);
+  opacity: var(--pa-hb-layer-opacity, 1);
+}
+
+.grid {
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(rgba(var(--ds-grid-rgb, 0,0,0), var(--pa-hb-grid-opacity, 0.04)) 1px, transparent 1px), linear-gradient(90deg, rgba(var(--ds-grid-rgb, 0,0,0), var(--pa-hb-grid-opacity, 0.04)) 1px, transparent 1px);
+  background-size: var(--pa-hb-grid-size, 40px) var(--pa-hb-grid-size, 40px);
+  mix-blend-mode: overlay;
+}
+
+.accents {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 20% 20%, rgba(var(--ds-accent-rgb, 0,0,0), 0.08) 0%, transparent 40%), radial-gradient(circle at 80% 80%, rgba(var(--ds-primary-rgb, 0,0,0), 0.06) 0%, transparent 35%);
+  filter: blur(var(--ds-blur-md, 0px));
+  opacity: var(--pa-hb-accents-opacity, 0.9);
+  mask-image: radial-gradient(closest-side, rgba(0,0,0,1), rgba(0,0,0,0));
+}
+
+.noise {
+  position: absolute;
+  inset: 0;
+  background-image: var(--ds-noise-image, none);
+  opacity: var(--pa-hb-noise-opacity, 0.02);
+  pointer-events: none;
+}

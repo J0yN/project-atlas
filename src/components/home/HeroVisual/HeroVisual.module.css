@@ -1,0 +1,38 @@
+/* HeroVisual.module.css */
+.root {
+  position: relative;
+}
+
+.shapeCircle {
+  position: absolute;
+  width: 48%;
+  height: 64%;
+  right: -10%;
+  top: -8%;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--ds-color-accent, transparent) 0%, rgba(var(--ds-accent-rgb, 0,0,0), 0.08) 60%);
+  filter: blur(var(--ds-blur-md, 0px));
+  transform: translateZ(0);
+  opacity: var(--pa-hv-circle-opacity, 0.9);
+}
+
+.shapeBlob {
+  position: absolute;
+  left: -6%;
+  bottom: -6%;
+  width: 56%;
+  height: 56%;
+  border-radius: 32%;
+  background: radial-gradient(circle at 30% 30%, var(--ds-color-primary, transparent), transparent 40%);
+  filter: blur(var(--ds-blur-sm, 0px));
+  opacity: var(--pa-hv-blob-opacity, 0.7);
+}
+
+.grid {
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(rgba(var(--ds-grid-rgb, 0,0,0), var(--pa-hv-grid-opacity, 0.02)) 1px, transparent 1px), linear-gradient(90deg, rgba(var(--ds-grid-rgb, 0,0,0), var(--pa-hv-grid-opacity, 0.02)) 1px, transparent 1px);
+  background-size: var(--pa-hv-grid-size, 40px) var(--pa-hv-grid-size, 40px);
+  opacity: var(--pa-hv-grid-opacity, 0.06);
+  pointer-events: none;
+}

@@ -1,0 +1,24 @@
+/* HeroStats.module.css */
+.root {
+  list-style: none;
+  display: flex;
+  gap: var(--ds-space-12, 0.5rem);
+  padding: 0;
+  margin: 0;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+}
+
+.value {
+  font-size: var(--ds-typography-h4, 1rem);
+  font-weight: var(--ds-typography-h4-weight, 600);
+  color: var(--ds-color-foreground, currentColor);
+}
+
+.label {
+  font-size: var(--ds-typography-small, 0.875rem);
+  color: var(--ds-color-muted, currentColor);
+}

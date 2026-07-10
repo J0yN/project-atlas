@@ -1,0 +1,5 @@
+/* HeroDescription.module.css */
+.root {
+  color: var(--ds-color-muted, var(--ds-color-foreground, currentColor));
+  margin-top: var(--ds-space-8, 0.5rem);
+}
