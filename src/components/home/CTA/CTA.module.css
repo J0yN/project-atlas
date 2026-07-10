@@ -1,0 +1,6 @@
+/* CTA.module.css */
+.root { background: var(--ds-color-surface, transparent); }
+.inner { display: flex; flex-direction: column; align-items: flex-start; gap: var(--ds-space-12, 0.75rem); }
+.title { font-size: var(--ds-typography-h4, 1.25rem); margin: 0; }
+.subtitle { margin: 0; color: var(--ds-color-muted, currentColor); }
+.actions { display: flex; gap: var(--ds-space-12, 0.75rem); margin-top: var(--ds-space-12, 0.75rem); }

@@ -1,0 +1,32 @@
+/* Categories.module.css */
+.root {
+}
+
+.title {
+  margin: 0 0 var(--ds-space-16, 1rem) 0;
+  font-size: var(--ds-typography-h4, 1.25rem);
+}
+
+.list {
+  display: flex;
+  gap: var(--ds-space-12, 0.75rem);
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.item { }
+
+.pill {
+  background: var(--ds-color-surface, transparent);
+  border-radius: var(--ds-radius-full, 9999px);
+  padding: var(--ds-space-8, 0.5rem) var(--ds-space-12, 0.75rem);
+  border: 1px solid var(--ds-color-border, transparent);
+  color: var(--ds-color-foreground, currentColor);
+}
+
+.count {
+  margin-left: var(--ds-space-8, 0.5rem);
+  opacity: 0.8;
+}

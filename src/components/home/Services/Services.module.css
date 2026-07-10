@@ -1,0 +1,7 @@
+/* Services.module.css */
+.root { }
+.title { font-size: var(--ds-typography-h4, 1.25rem); margin-bottom: var(--ds-space-16, 1rem); }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: var(--ds-space-24, 1.5rem); }
+.card { background: var(--ds-color-surface, transparent); padding: var(--ds-space-16, 1rem); border-radius: var(--ds-radius-md, 0); }
+.cardTitle { margin: 0 0 var(--ds-space-8, 0.5rem); }
+.cardDesc { margin: 0; color: var(--ds-color-muted, currentColor); }
