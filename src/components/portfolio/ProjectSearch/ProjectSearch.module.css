@@ -1,0 +1,4 @@
+.root { display:block; }
+.label { position:relative; display:block; }
+.input { padding: var(--ds-space-8,0.5rem); border:1px solid var(--ds-color-border, transparent); border-radius: var(--ds-radius-sm,0.25rem); width:100%; }
+.sr { position:absolute; left:-9999px; }
