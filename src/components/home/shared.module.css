@@ -1,0 +1,4 @@
+.section {
+  padding-top: var(--ds-space-40, 2.5rem);
+  padding-bottom: var(--ds-space-40, 2.5rem);
+}

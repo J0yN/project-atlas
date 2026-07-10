@@ -1,5 +1,5 @@
 /* WorkspacePreview.module.css */
-.root { padding-top: var(--ds-space-40, 2.5rem); padding-bottom: var(--ds-space-40, 2.5rem); }
+.root { }
 .title { font-size: var(--ds-typography-h4, 1.25rem); margin-bottom: var(--ds-space-16, 1rem); }
 .previewGrid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: var(--ds-space-24, 1.5rem); }
 .previewCard { height: 180px; background: linear-gradient(135deg, var(--ds-color-surface, transparent), var(--ds-color-background, transparent)); border-radius: var(--ds-radius-md, 0); }

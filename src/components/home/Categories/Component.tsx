@@ -1,6 +1,7 @@
 import React from 'react';
 import clsx from 'clsx';
 import styles from './Categories.module.css';
+import shared from '../shared.module.css';
 import { Container } from '@/components/ui';
 
 export type Category = { id: string; name: string; count?: number };
@@ -8,7 +9,7 @@ export type CategoriesProps = React.ComponentPropsWithoutRef<'section'> & { item
 
 export const Categories: React.FC<CategoriesProps> = ({ items = [], title = 'Categories', className, ...rest }) => {
   return (
-    <section className={clsx(styles.root, className)} aria-labelledby="categories-title" {...rest}>
+    <section className={clsx(shared.section, styles.root, className)} aria-labelledby="categories-title" {...rest}>
       <Container>
         <h2 id="categories-title" className={styles.title}>
           {title}

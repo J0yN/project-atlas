@@ -1,8 +1,5 @@
 /* JournalPreview.module.css */
-.root {
-  padding-top: var(--ds-space-40, 2.5rem);
-  padding-bottom: var(--ds-space-40, 2.5rem);
-}
+.root { }
 
 .title { font-size: var(--ds-typography-h4, 1.25rem); margin-bottom: var(--ds-space-16, 1rem); }
 

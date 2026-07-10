@@ -1,6 +1,7 @@
 import React from 'react';
 import clsx from 'clsx';
 import styles from './Services.module.css';
+import shared from '../shared.module.css';
 import { Container } from '@/components/ui';
 
 export type Service = { id: string; title: string; description?: string };
@@ -8,7 +9,7 @@ export type ServicesProps = React.ComponentPropsWithoutRef<'section'> & { items?
 
 export const Services: React.FC<ServicesProps> = ({ items = [], title = 'Services', className, ...rest }) => {
   return (
-    <section className={clsx(styles.root, className)} aria-labelledby="services-title" {...rest}>
+    <section className={clsx(shared.section, styles.root, className)} aria-labelledby="services-title" {...rest}>
       <Container>
         <h2 id="services-title" className={styles.title}>
           {title}

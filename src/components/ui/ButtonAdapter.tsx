@@ -1,28 +1,23 @@
 import React from 'react';
 
-export type ButtonAdapterProps = React.ComponentPropsWithoutRef<'button'> & {
+export type ButtonAdapterProps = (React.AnchorHTMLAttributes<HTMLAnchorElement> | React.ButtonHTMLAttributes<HTMLButtonElement>) & {
   as?: 'a' | 'button';
   href?: string;
   variant?: string;
   children?: React.ReactNode;
 };
 
-/**
- * ButtonAdapter
- * Lightweight adapter to emulate a Button API until a canonical Button exists.
- * Does not implement visual styles — consumers apply styles via className.
- */
-const ButtonAdapter = React.forwardRef<any, ButtonAdapterProps>(({ as, href, variant, children, ...rest }, ref) => {
+const ButtonAdapter = React.forwardRef<HTMLAnchorElement | HTMLButtonElement, ButtonAdapterProps>(({ as, href, children, ...rest }, ref) => {
   const tag = as ?? (href ? 'a' : 'button');
   if (tag === 'a') {
     return (
-      <a ref={ref as any} href={href} {...(rest as any)}>
+      <a ref={ref as React.Ref<HTMLAnchorElement>} href={href} {...(rest as React.AnchorHTMLAttributes<HTMLAnchorElement>)}>
         {children}
       </a>
     );
   }
   return (
-    <button ref={ref as any} type={(rest as any).type ?? 'button'} {...(rest as any)}>
+    <button ref={ref as React.Ref<HTMLButtonElement>} type={(rest as React.ButtonHTMLAttributes<HTMLButtonElement>).type ?? 'button'} {...(rest as React.ButtonHTMLAttributes<HTMLButtonElement>)}>
       {children}
     </button>
   );

@@ -1,6 +1,7 @@
 import React from 'react';
 import clsx from 'clsx';
 import styles from './FeaturedWork.module.css';
+import shared from '../shared.module.css';
 import type { ReactNode } from 'react';
 import { Container } from '@/components/ui';
 
@@ -15,13 +16,9 @@ export type FeaturedWorkProps = React.ComponentPropsWithoutRef<'section'> & {
   items?: readonly WorkItem[];
 };
 
-/**
- * FeaturedWork
- * Server component: renders a responsive grid of featured work cards (placeholder content).
- */
 export const FeaturedWork: React.FC<FeaturedWorkProps> = ({ title = 'Featured Work', items = [], className, ...rest }) => {
   return (
-    <section className={clsx(styles.root, className)} aria-labelledby="featured-work-title" {...rest}>
+    <section className={clsx(shared.section, styles.root, className)} aria-labelledby="featured-work-title" {...rest}>
       <Container>
         <div className={styles.header}>
           <h2 id="featured-work-title" className={styles.title}>

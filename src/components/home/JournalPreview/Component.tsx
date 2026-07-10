@@ -1,6 +1,7 @@
 import React from 'react';
 import clsx from 'clsx';
 import styles from './JournalPreview.module.css';
+import shared from '../shared.module.css';
 import { Container } from '@/components/ui';
 
 export type JournalItem = { id: string; title: string; excerpt?: string; date?: string };
@@ -8,7 +9,7 @@ export type JournalPreviewProps = React.ComponentPropsWithoutRef<'section'> & { 
 
 export const JournalPreview: React.FC<JournalPreviewProps> = ({ items = [], title = 'From the Journal', className, ...rest }) => {
   return (
-    <section className={clsx(styles.root, className)} aria-labelledby="journal-title" {...rest}>
+    <section className={clsx(shared.section, styles.root, className)} aria-labelledby="journal-title" {...rest}>
       <Container>
         <h2 id="journal-title" className={styles.title}>
           {title}

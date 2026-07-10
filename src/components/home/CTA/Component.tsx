@@ -1,6 +1,7 @@
 import React from 'react';
 import clsx from 'clsx';
 import styles from './CTA.module.css';
+import shared from '../shared.module.css';
 import ButtonAdapter from '@/components/ui/ButtonAdapter';
 import { Container } from '@/components/ui';
 
@@ -8,7 +9,7 @@ export type CTAProps = React.ComponentPropsWithoutRef<'section'> & { title?: str
 
 export const CTA: React.FC<CTAProps> = ({ title = 'Ready to start your project?', subtitle = 'Get in touch to discuss how we can help.', className, ...rest }) => {
   return (
-    <section className={clsx(styles.root, className)} aria-labelledby="cta-title" {...rest}>
+    <section className={clsx(shared.section, styles.root, className)} aria-labelledby="cta-title" {...rest}>
       <Container>
         <div className={styles.inner}>
           <h2 id="cta-title" className={styles.title}>{title}</h2>
