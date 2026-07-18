@@ -11,6 +11,7 @@
     "format": "prettier --write \"src/**/*.{js,ts,tsx,json,css,md}\""
   },
   "dependencies": {
+    "clsx": "^2.1.1",
     "next": "latest",
     "react": "latest",
     "react-dom": "latest",
@@ -19,6 +20,7 @@
     "lucide-react": "latest"
   },
   "devDependencies": {
+    "@tailwindcss/postcss": "^4.3.3",
     "typescript": "latest",
     "@types/react": "latest",
     "@types/node": "latest",
