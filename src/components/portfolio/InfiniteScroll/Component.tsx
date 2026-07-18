@@ -4,13 +4,13 @@ import clsx from 'clsx';
 import styles from './InfiniteScroll.module.css';
 import type { ProjectItem } from '../MasonryGrid';
 
-export type InfiniteScrollProps = React.ComponentPropsWithoutRef<'div'> & {
+export type InfiniteScrollProps = Omit<React.ComponentPropsWithoutRef<'div'>, 'children'> & {
   initialItems?: readonly ProjectItem[];
   pageSize?: number;
   children: (items: readonly ProjectItem[]) => React.ReactNode;
 };
 
-export const InfiniteScroll: React.FC<InfiniteScrollProps> = ({ initialItems = [], pageSize = 12, children, className, ...rest }) => {
+export const InfiniteScroll = ({ initialItems = [], pageSize = 12, children, className, ...rest }: InfiniteScrollProps) => {
   const [items, setItems] = useState<ProjectItem[]>(Array.from(initialItems));
   const [loading, setLoading] = useState(false);
   const sentinelRef = useRef<HTMLDivElement | null>(null);

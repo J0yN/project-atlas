@@ -1,13 +1,19 @@
-export const metadata = {
-  title: "Project Atlas",
-  description: "Project Atlas — foundation scaffold",
-  viewport: "width=device-width, initial-scale=1"
-};
-
+import type { Metadata, Viewport } from 'next';
+import type { ReactNode } from 'react';
 import "@/styles/globals.css";
 import Providers from "@/providers/providers";
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export const metadata: Metadata = {
+  title: "Project Atlas",
+  description: "Project Atlas — foundation scaffold"
+};
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1
+};
+
+export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
       <body suppressHydrationWarning>

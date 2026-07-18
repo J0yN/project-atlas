@@ -11,10 +11,11 @@ export const ReadingProgress: React.FC<ReadingProgressProps> = ({ targetId = 'ar
   const [progress, setProgress] = useState(0);
 
   useEffect(() => {
-    const el = document.getElementById(targetId);
-    if (!el) return;
+    const element = document.getElementById(targetId);
+    if (!element) return;
+    const contentElement = element;
     function onScroll() {
-      const rect = el.getBoundingClientRect();
+      const rect = contentElement.getBoundingClientRect();
       const total = rect.height - window.innerHeight;
       if (total <= 0) {
         setProgress(100);
