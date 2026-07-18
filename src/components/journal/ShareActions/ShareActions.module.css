@@ -1,0 +1,2 @@
+.root { display:flex; gap: var(--ds-space-8,0.5rem); }
+.btn { padding: var(--ds-space-8,0.5rem); border-radius: var(--ds-radius-sm,0.25rem); background: var(--ds-color-surface, transparent); border:1px solid var(--ds-color-border, transparent); }
