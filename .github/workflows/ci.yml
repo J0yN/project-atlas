@@ -1,0 +1,38 @@
+name: Project Atlas CI
+
+on:
+  push:
+    branches:
+      - main
+      - 'sprint-*'
+      - 'chore/*'
+
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install Dependencies
+        run: npm install
+
+      - name: TypeScript Check
+        run: npm run typecheck
+
+      - name: ESLint
+        run: npm run lint
+
+      - name: Production Build
+        run: npm run build
