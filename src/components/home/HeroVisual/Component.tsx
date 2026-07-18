@@ -3,7 +3,6 @@ import React from 'react';
 import clsx from 'clsx';
 import styles from './HeroVisual.module.css';
 import { rem } from '@/design-system/utils/tokenHelpers';
-import { blur } from '@/design-system/tokens/blur';
 
 export type HeroVisualProps = React.ComponentPropsWithoutRef<'div'> & {
   variant?: 'subtle' | 'bold';

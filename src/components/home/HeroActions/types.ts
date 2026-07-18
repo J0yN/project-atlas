@@ -1,14 +1,10 @@
-import React from 'react';
-import clsx from 'clsx';
+import type { MouseEvent } from 'react';
 
 export type ActionItem = {
   id?: string;
   label: string;
   href?: string;
-  onClick?: (e: React.MouseEvent) => void;
+  onClick?: (e: MouseEvent) => void;
   variant?: 'primary' | 'secondary' | string;
   as?: 'a' | 'button';
 };
-
-// Export types for use by Hero component props
-export type { ActionItem };

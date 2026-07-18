@@ -5,7 +5,7 @@ const unusedImports = require("eslint-plugin-unused-imports");
 
 module.exports = [
   {
-    ignores: ["node_modules/**", ".next/**", "public/**"]
+    ignores: ["node_modules/**", ".next/**", "public/**", "eslint.config.js"]
   },
   {
     files: ["**/*.{js,jsx,ts,tsx}"],
