@@ -1,0 +1,26 @@
+.dot {
+  position: fixed;
+  top: -5px;
+  left: -5px;
+  width: 10px;
+  height: 10px;
+  border-radius: var(--ds-radius-full, 9999px);
+  background-color: var(--ds-color-accent, #2dd4bf);
+  pointer-events: none;
+  z-index: var(--ds-z-index-tooltip, 800);
+  will-change: transform;
+}
+
+.ring {
+  position: fixed;
+  top: -20px;
+  left: -20px;
+  width: 40px;
+  height: 40px;
+  border-radius: var(--ds-radius-full, 9999px);
+  border: 1.5px solid var(--ds-color-accent, #2dd4bf);
+  opacity: 0.45;
+  pointer-events: none;
+  z-index: var(--ds-z-index-tooltip, 800);
+  will-change: transform;
+}
