@@ -1,0 +1,4 @@
+.root { padding: var(--ds-space-12,0.75rem) 0; }
+.title { margin: 0 0 var(--ds-space-8,0.5rem); font-size: var(--ds-typography-h5,1rem); }
+.wrapper { width:100%; max-width:80rem; margin:0 auto; }
+.video { width:100%; height:auto; border-radius: var(--ds-radius-sm,0.25rem); }

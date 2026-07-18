@@ -1,0 +1,5 @@
+.root { display:grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: var(--ds-space-12,0.75rem); }
+.item { background: var(--ds-color-surface, transparent); padding: var(--ds-space-12,0.75rem); border-radius: var(--ds-radius-sm,0.25rem); text-align:center; }
+.value { font-size: var(--ds-typography-h4,1.25rem); font-weight:var(--ds-typography-strong,600); }
+.label { font-size: var(--ds-typography-small,0.875rem); color: var(--ds-color-muted, currentColor); }
+.desc { margin-top: var(--ds-space-8,0.5rem); font-size: var(--ds-typography-small,0.875rem); }
