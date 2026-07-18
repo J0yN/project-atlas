@@ -21,19 +21,121 @@ body {
 }
 
 :root {
-  /* light theme variables */
+  /* ── Legacy app variables ──────────────────────────────── */
   --bg: #ffffff;
   --fg: #0f172a;
   --muted: #94a3b8;
   --accent: #2563eb;
+
+  /* ── Design System: color tokens (light) ──────────────── */
+  --ds-color-background: #ffffff;
+  --ds-color-foreground: #0f172a;
+  --ds-color-surface: #f8fafc;
+  --ds-color-surface-muted: #f1f5f9;
+  --ds-color-card: #f8fafc;
+  --ds-color-popover: #ffffff;
+  --ds-color-border: #e2e8f0;
+  --ds-color-outline: #60a5fa;
+  --ds-color-muted: #94a3b8;
+  --ds-color-primary: #2563eb;
+  --ds-color-on-primary: #ffffff;
+  --ds-color-secondary: #64748b;
+  --ds-color-on-secondary: #ffffff;
+  --ds-color-accent: #2dd4bf;
+  --ds-color-success: #059669;
+  --ds-color-warning: #d97706;
+  --ds-color-destructive: #dc2626;
+  --ds-color-info: #4f46e5;
+
+  /* ── Design System: overlay ────────────────────────────── */
+  --ds-overlay: rgba(0, 0, 0, 0.32);
+
+  /* ── Design System: spacing tokens ────────────────────── */
+  --ds-space-2: 0.125rem;
+  --ds-space-4: 0.25rem;
+  --ds-space-8: 0.5rem;
+  --ds-space-12: 0.75rem;
+  --ds-space-16: 1rem;
+  --ds-space-20: 1.25rem;
+  --ds-space-24: 1.5rem;
+  --ds-space-32: 2rem;
+  --ds-space-40: 2.5rem;
+  --ds-space-48: 3rem;
+  --ds-space-56: 3.5rem;
+  --ds-space-64: 4rem;
+
+  /* ── Design System: radius tokens ─────────────────────── */
+  --ds-radius-xs: 0.125rem;
+  --ds-radius-sm: 0.25rem;
+  --ds-radius-md: 0.5rem;
+  --ds-radius-lg: 0.75rem;
+  --ds-radius-xl: 1rem;
+  --ds-radius-2xl: 1.5rem;
+  --ds-radius-full: 9999px;
+
+  /* ── Design System: shadow tokens ─────────────────────── */
+  --ds-shadow-xs: 0 1px 2px rgba(2, 6, 23, 0.04);
+  --ds-shadow-sm: 0 1px 3px rgba(2, 6, 23, 0.06);
+  --ds-shadow-md: 0 4px 12px rgba(2, 6, 23, 0.08);
+  --ds-shadow-lg: 0 8px 24px rgba(2, 6, 23, 0.12);
+  --ds-shadow-xl: 0 20px 40px rgba(2, 6, 23, 0.16);
+  --ds-shadow-2xl: 0 30px 60px rgba(2, 6, 23, 0.2);
+
+  /* ── Design System: z-index tokens ────────────────────── */
+  --ds-z-index-dropdown: 100;
+  --ds-z-index-sticky: 200;
+  --ds-z-index-header: 300;
+  --ds-z-index-overlay: 400;
+  --ds-z-index-drawer: 500;
+  --ds-z-index-modal: 600;
+  --ds-z-index-popover: 700;
+  --ds-z-index-tooltip: 800;
+  --ds-z-index-toast: 900;
+
+  /* ── Design System: typography tokens ─────────────────── */
+  --ds-typography-small: 0.875rem;
+  --ds-typography-caption: 0.75rem;
+  --ds-typography-h4: 1.25rem;
+  --ds-typography-h5: 1rem;
+  --ds-typography-h6: 0.875rem;
 }
 
-/* dark theme overrides (next-themes applies `class="dark"` to html) */
+/* ── Dark theme overrides (next-themes sets class="dark" on html) ── */
 .dark {
+  /* Legacy */
   --bg: #0f172a;
   --fg: #f8fafc;
   --muted: #94a3b8;
   --accent: #60a5fa;
+
+  /* Design System: color tokens (dark) */
+  --ds-color-background: #0b1221;
+  --ds-color-foreground: #f8fafc;
+  --ds-color-surface: #0f172a;
+  --ds-color-surface-muted: #1f2937;
+  --ds-color-card: #1f2937;
+  --ds-color-popover: #334155;
+  --ds-color-border: #334155;
+  --ds-color-outline: #93c5fd;
+  --ds-color-muted: #94a3b8;
+  --ds-color-primary: #60a5fa;
+  --ds-color-on-primary: #f8fafc;
+  --ds-color-secondary: #f1f5f9;
+  --ds-color-on-secondary: #0f172a;
+  --ds-color-accent: #2dd4bf;
+  --ds-color-success: #059669;
+  --ds-color-warning: #f59e0b;
+  --ds-color-destructive: #fb7185;
+  --ds-color-info: #818cf8;
+
+  --ds-overlay: rgba(0, 0, 0, 0.6);
+
+  --ds-shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.2);
+  --ds-shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.24);
+  --ds-shadow-md: 0 4px 12px rgba(0, 0, 0, 0.3);
+  --ds-shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.4);
+  --ds-shadow-xl: 0 20px 40px rgba(0, 0, 0, 0.5);
+  --ds-shadow-2xl: 0 30px 60px rgba(0, 0, 0, 0.6);
 }
 
 /* Accessible focus styles */
