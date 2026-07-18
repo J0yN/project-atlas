@@ -22,8 +22,8 @@ import {
 import { useSearch } from '@/providers/SearchProvider';
 import { useKeyboardShortcut } from '@/hooks/useKeyboardShortcut';
 import { useRecentSearches } from '@/hooks/useRecentSearches';
+import type { CommandPaletteMessages } from '@/i18n/messages';
 import { fuzzySearch } from '@/utils/fuzzy';
-import { searchIndex } from '@/data/searchIndex';
 import type { SearchResult, SearchResultType } from '@/types/search';
 import styles from './CommandPalette.module.css';
 
@@ -47,11 +47,15 @@ function ResultTypeIcon({
   }
 }
 
-const QUICK_ITEMS = searchIndex
-  .filter((item) => item.type === 'page' || item.type === 'section')
-  .slice(0, 6);
+type CommandPaletteProps = {
+  readonly searchIndex: readonly SearchResult[];
+  readonly messages: CommandPaletteMessages;
+};
 
-export function CommandPalette(): React.JSX.Element | null {
+export function CommandPalette({
+  searchIndex,
+  messages
+}: CommandPaletteProps): React.JSX.Element | null {
   const { isOpen, close, toggle } = useSearch();
   const router = useRouter();
   const { resolvedTheme, setTheme } = useTheme();
@@ -68,6 +72,14 @@ export function CommandPalette(): React.JSX.Element | null {
   const resolvedThemeRef = useRef(resolvedTheme);
 
   const listboxId = useId();
+
+  const quickItems = useMemo(
+    () =>
+      searchIndex
+        .filter((item) => item.type === 'page' || item.type === 'section')
+        .slice(0, 6),
+    [searchIndex]
+  );
 
   // Sync resolvedTheme to ref to avoid stale closure in executeResult
   useEffect(() => {
@@ -115,7 +127,7 @@ export function CommandPalette(): React.JSX.Element | null {
 
   const displayItems: readonly SearchResult[] = query.trim()
     ? results
-    : QUICK_ITEMS;
+    : quickItems;
 
   // Reset active index whenever the displayed list changes
   useEffect(() => {
@@ -197,7 +209,7 @@ export function CommandPalette(): React.JSX.Element | null {
         className={styles.panel}
         role="dialog"
         aria-modal="true"
-        aria-label="Command palette"
+        aria-label={messages.dialogLabel}
         onKeyDown={handleKeyDown}
       >
         {/* Search input */}
@@ -214,13 +226,13 @@ export function CommandPalette(): React.JSX.Element | null {
             aria-autocomplete="list"
             aria-controls={listboxId}
             aria-activedescendant={activeResultId}
-            placeholder="Search or jump to…"
+            placeholder={messages.placeholder}
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             autoComplete="off"
             spellCheck={false}
           />
-          <kbd className={styles.escHint} aria-label="Press Escape to close">
+          <kbd className={styles.escHint} aria-label={messages.escapeHintLabel}>
             esc
           </kbd>
         </div>
@@ -229,15 +241,15 @@ export function CommandPalette(): React.JSX.Element | null {
         {!query.trim() && recentSearches.length > 0 && (
           <div className={styles.section}>
             <div className={styles.sectionHeader}>
-              <span className={styles.sectionLabel}>Recent</span>
+              <span className={styles.sectionLabel}>{messages.recentLabel}</span>
               <button
                 type="button"
                 className={styles.clearButton}
                 onClick={clearRecentSearches}
-                aria-label="Clear all recent searches"
+                aria-label={messages.clearAriaLabel}
               >
                 <X size={12} aria-hidden />
-                Clear
+                {messages.clearLabel}
               </button>
             </div>
             <ul className={styles.recentList} role="list">
@@ -265,7 +277,11 @@ export function CommandPalette(): React.JSX.Element | null {
         <ul
           id={listboxId}
           role="listbox"
-          aria-label={query.trim() ? 'Search results' : 'Quick navigation'}
+          aria-label={
+            query.trim()
+              ? messages.searchResultsLabel
+              : messages.quickNavigationLabel
+          }
           className={styles.list}
         >
           {displayItems.length === 0 && query.trim() ? (
@@ -274,7 +290,7 @@ export function CommandPalette(): React.JSX.Element | null {
               aria-selected={false}
               className={styles.empty}
             >
-              No results for &ldquo;{query}&rdquo;
+              {messages.noResultsLabel} &ldquo;{query}&rdquo;
             </li>
           ) : (
             displayItems.map((item, index) => (
@@ -316,13 +332,13 @@ export function CommandPalette(): React.JSX.Element | null {
         {/* Keyboard hint footer */}
         <div className={styles.footer} aria-hidden="true">
           <span>
-            <kbd>↑↓</kbd> navigate
+            <kbd>↑↓</kbd> {messages.footerNavigateLabel}
           </span>
           <span>
-            <kbd>↵</kbd> open
+            <kbd>↵</kbd> {messages.footerOpenLabel}
           </span>
           <span>
-            <kbd>esc</kbd> close
+            <kbd>esc</kbd> {messages.footerCloseLabel}
           </span>
         </div>
       </div>

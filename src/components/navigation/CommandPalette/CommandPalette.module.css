@@ -9,8 +9,7 @@
   align-items: flex-start;
   justify-content: center;
   padding-top: clamp(3.5rem, 10vh, 7rem);
-  padding-left: var(--ds-space-16, 1rem);
-  padding-right: var(--ds-space-16, 1rem);
+  padding-inline: var(--ds-space-16, 1rem);
   z-index: var(--ds-z-index-modal, 600);
   background: var(--ds-overlay, rgba(0, 0, 0, 0.4));
   backdrop-filter: blur(2px);
@@ -125,7 +124,7 @@
   padding: var(--ds-space-4, 0.25rem) var(--ds-space-8, 0.5rem);
   border: none;
   background: none;
-  text-align: left;
+  text-align: start;
   font-size: 0.875rem;
   color: var(--ds-color-muted, #94a3b8);
   border-radius: var(--ds-radius-sm, 0.25rem);
@@ -184,7 +183,7 @@
   padding: var(--ds-space-8, 0.5rem) var(--ds-space-12, 0.75rem);
   border: none;
   background: none;
-  text-align: left;
+  text-align: start;
   cursor: pointer;
   border-radius: var(--ds-radius-md, 0.5rem);
   color: var(--ds-color-foreground, #0f172a);
@@ -266,7 +265,7 @@
   border: 1px solid var(--ds-color-border, #e2e8f0);
   border-radius: 3px;
   padding: 1px 4px;
-  margin-right: 3px;
+  margin-inline-end: 3px;
 }
 
 /* ── Reduced motion ────────────────────────────────────────── */

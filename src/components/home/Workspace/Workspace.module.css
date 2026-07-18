@@ -13,6 +13,18 @@
   max-width: 48rem;
 }
 
+.heroTopRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.languageSwitch {
+  margin-inline-start: auto;
+}
+
 .eyebrow,
 .sectionEyebrow {
   margin: 0;
@@ -212,6 +224,14 @@
 }
 
 @media (max-width: 48rem) {
+  .heroTopRow {
+    align-items: flex-start;
+  }
+
+  .languageSwitch {
+    margin-inline-start: 0;
+  }
+
   .faqItem,
   .card,
   .statCard {
