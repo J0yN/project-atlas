@@ -1,14 +1,14 @@
 import React from 'react';
 import clsx from 'clsx';
 import styles from './WorkExplorer.module.css';
-import type { ProjectItem } from './MasonryGrid';
-import { MasonryGrid } from './MasonryGrid';
-import { ProjectFilters } from './ProjectFilters';
-import { ProjectSorting } from './ProjectSorting';
-import { ProjectSearch } from './ProjectSearch';
-import { InfiniteScroll } from './InfiniteScroll';
-import { CategoryTabs } from './CategoryTabs';
-import { EmptyState } from './EmptyState';
+import type { ProjectItem } from '../MasonryGrid';
+import { MasonryGrid } from '../MasonryGrid';
+import { ProjectFilters } from '../ProjectFilters';
+import { ProjectSorting } from '../ProjectSorting';
+import { ProjectSearch } from '../ProjectSearch';
+import { InfiniteScroll } from '../InfiniteScroll';
+import { CategoryTabs } from '../CategoryTabs';
+import { EmptyState } from '../EmptyState';
 
 export type WorkExplorerProps = React.ComponentPropsWithoutRef<'section'> & {
   title?: string;

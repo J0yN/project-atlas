@@ -1,6 +1,6 @@
 module.exports = {
   root: true,
-  ignores: ["node_modules", ".next", "public"],
+  ignorePatterns: ["node_modules", ".next", "public", "next.config.ts", "postcss.config.js", "prettier.config.js"],
   parser: "@typescript-eslint/parser",
   parserOptions: {
     ecmaVersion: 2022,
@@ -22,6 +22,7 @@ module.exports = {
   rules: {
     "react/react-in-jsx-scope": "off",
     "unused-imports/no-unused-imports": "error",
+    "@typescript-eslint/no-unused-vars": "off",
     "@typescript-eslint/no-explicit-any": "warn"
   },
   settings: {

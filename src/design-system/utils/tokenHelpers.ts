@@ -14,7 +14,13 @@ export function px(value: number | string): string {
  * Convert a pixel value to rem assuming 16px base.
  * @param pxValue pixel value
  */
-export function rem(pxValue: number): string {
+export function rem(pxValue: number | string): string {
+  if (typeof pxValue === 'string') {
+    if (pxValue.endsWith('px')) {
+      return rem(Number.parseFloat(pxValue));
+    }
+    return pxValue;
+  }
   const base = 16;
   return `${pxValue / base}rem`;
 }

@@ -4,7 +4,7 @@ import clsx from 'clsx';
 import styles from './InfiniteScroll.module.css';
 import type { ProjectItem } from '../MasonryGrid';
 
-export type InfiniteScrollProps = React.ComponentPropsWithoutRef<'div'> & {
+export type InfiniteScrollProps = Omit<React.ComponentPropsWithoutRef<'div'>, 'children'> & {
   initialItems?: readonly ProjectItem[];
   pageSize?: number;
   children: (items: readonly ProjectItem[]) => React.ReactNode;
