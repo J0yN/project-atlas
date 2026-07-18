@@ -148,6 +148,28 @@ body {
   border-radius: 6px;
 }
 
+/* ── Theme Transition ────────────────────────────────────────────── */
+/* The `theme-transitioning` class is added briefly by ThemeEngineProvider
+   whenever the base theme (light/dark) changes, enabling smooth color
+   crossfades without disrupting other animations. */
+html.theme-transitioning,
+html.theme-transitioning *,
+html.theme-transitioning *::before,
+html.theme-transitioning *::after {
+  transition-property: background-color, color, border-color, fill, stroke !important;
+  transition-duration: 250ms !important;
+  transition-timing-function: ease !important;
+  transition-delay: 0ms !important;
+}
+
+/* ── color-scheme hint for native UI elements ────────────────────── */
+:root {
+  color-scheme: light;
+}
+.dark {
+  color-scheme: dark;
+}
+
 /* Utility to help with reduced motion preference */
 @media (prefers-reduced-motion: reduce) {
   * {
