@@ -2,18 +2,27 @@ import React from 'react';
 import clsx from 'clsx';
 import styles from './Services.module.css';
 import shared from '../shared.module.css';
-import { Container } from '@/components/ui';
+import { Container, Stack } from '@/components/ui';
 
 export type Service = { id: string; title: string; description?: string };
-export type ServicesProps = React.ComponentPropsWithoutRef<'section'> & { items?: readonly Service[]; title?: string };
+export type ServicesProps = React.ComponentPropsWithoutRef<'section'> & {
+  items?: readonly Service[];
+  title?: string;
+  eyebrow?: string;
+  description?: string;
+};
 
-export const Services: React.FC<ServicesProps> = ({ items = [], title = 'Services', className, ...rest }) => {
+export const Services: React.FC<ServicesProps> = ({ items = [], title = 'Services', eyebrow, description, className, ...rest }) => {
   return (
     <section className={clsx(shared.section, styles.root, className)} aria-labelledby="services-title" {...rest}>
       <Container>
-        <h2 id="services-title" className={styles.title}>
-          {title}
-        </h2>
+        <Stack gap="12" className={styles.header}>
+          {eyebrow ? <p className={styles.eyebrow}>{eyebrow}</p> : null}
+          <h2 id="services-title" className={styles.title}>
+            {title}
+          </h2>
+          {description ? <p className={styles.description}>{description}</p> : null}
+        </Stack>
         <div className={styles.grid}>
           {items.length > 0
             ? items.map((s) => (

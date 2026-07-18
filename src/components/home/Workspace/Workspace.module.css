@@ -137,9 +137,25 @@
 
 .faqQuestion {
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
   font-size: 1.05rem;
   font-weight: 600;
   list-style: none;
+}
+
+.faqQuestion::after {
+  content: "+";
+  font-size: 1.25rem;
+  line-height: 1;
+  color: var(--accent);
+  transition: transform 180ms ease;
+}
+
+.faqItem[open] .faqQuestion::after {
+  transform: rotate(45deg);
 }
 
 .faqQuestion::-webkit-details-marker {

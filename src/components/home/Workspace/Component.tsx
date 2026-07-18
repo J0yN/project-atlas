@@ -67,7 +67,13 @@ export function Workspace({ hero, process, timeline, skills, experience, philoso
         </Container>
       </section>
 
-      <Categories title="Skills" items={skills} />
+      <Categories
+        id="workspace-skills"
+        title="Skills"
+        eyebrow="Skills"
+        description="Capabilities applied across discovery, delivery, and iteration to keep the workspace cohesive."
+        items={skills}
+      />
 
       <section className={clsx(shared.section, styles.section)} aria-labelledby="workspace-experience-title">
         <Container>
@@ -113,7 +119,13 @@ export function Workspace({ hero, process, timeline, skills, experience, philoso
         </Container>
       </section>
 
-      <Services title="Services" items={services} />
+      <Services
+        id="workspace-services"
+        title="Services"
+        eyebrow="Services"
+        description="Practical support matched to the stages of work teams need to move from direction to delivery."
+        items={services}
+      />
 
       <section className={clsx(shared.section, styles.section)} aria-labelledby="workspace-faq-title">
         <Container>
@@ -125,8 +137,8 @@ export function Workspace({ hero, process, timeline, skills, experience, philoso
           </Stack>
 
           <div className={styles.faqList}>
-            {faq.map((item) => (
-              <details key={item.id} className={styles.faqItem}>
+            {faq.map((item, index) => (
+              <details key={item.id} className={styles.faqItem} open={index === 0}>
                 <summary className={styles.faqQuestion}>{item.question}</summary>
                 <p className={styles.faqAnswer}>{item.answer}</p>
               </details>
