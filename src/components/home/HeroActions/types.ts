@@ -9,6 +9,3 @@ export type ActionItem = {
   variant?: 'primary' | 'secondary' | string;
   as?: 'a' | 'button';
 };
-
-// Export types for use by Hero component props
-export type { ActionItem };
