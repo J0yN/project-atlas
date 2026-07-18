@@ -1,0 +1,5 @@
+.root { display:flex; gap: var(--ds-space-12,0.75rem); align-items:center; }
+.avatar { width:48px; height:48px; border-radius: var(--ds-radius-full,9999px); object-fit: cover; }
+.info { display:flex; flex-direction:column; }
+.name { font-weight: var(--ds-typography-strong,600); }
+.bio { color: var(--ds-color-muted, currentColor); font-size: var(--ds-typography-small,0.875rem); }

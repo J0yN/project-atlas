@@ -1,0 +1,1 @@
+.root { display:inline-block; padding: var(--ds-space-4,0.25rem) var(--ds-space-8,0.5rem); border-radius: var(--ds-radius-full,9999px); background: var(--ds-color-surface, transparent); color: var(--ds-color-foreground, currentColor); font-size: var(--ds-typography-small,0.875rem); }

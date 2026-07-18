@@ -1,0 +1,3 @@
+.root { position: fixed; top: 0; left: 0; height: 3px; width:100%; background: transparent; z-index: var(--ds-z-index-nav, 1000); }
+.bar { height: 100%; background: var(--ds-color-accent, currentColor); width: 0%; transition: width 120ms linear; }
+@media (prefers-reduced-motion: reduce) { .bar { transition: none; } }

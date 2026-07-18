@@ -1,0 +1,8 @@
+.root { padding: var(--ds-space-12,0.75rem); border-left: 1px solid var(--ds-color-border, transparent); }
+.heading { margin: 0 0 var(--ds-space-8,0.5rem); font-size: var(--ds-typography-h6,1rem); }
+.list { list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap: var(--ds-space-4,0.25rem); }
+.item { margin:0; }
+.link { color: var(--ds-color-foreground, currentColor); text-decoration:none; }
+.depth-2 { padding-left: var(--ds-space-8,0.5rem); }
+.depth-3 { padding-left: var(--ds-space-16,1rem); }
+@media (max-width:900px) { .root { display:none; } }
