@@ -10,9 +10,9 @@ export type ShareActionsProps = React.ComponentPropsWithoutRef<'div'> & {
 
 export const ShareActions: React.FC<ShareActionsProps> = ({ title = document.title, url = typeof window !== 'undefined' ? window.location.href : '', className, ...rest }) => {
   async function onShare() {
-    if ((navigator as any).share) {
+    if ('share' in navigator && typeof navigator.share === 'function') {
       try {
-        await (navigator as any).share({ title, url });
+        await navigator.share({ title, url });
       } catch {
         // user cancelled
       }

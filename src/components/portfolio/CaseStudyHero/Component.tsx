@@ -19,7 +19,7 @@ export const CaseStudyHero: React.FC<CaseStudyHeroProps> = ({ title, subtitle, k
       </div>
       {cover && (
         <div className={styles.media} aria-hidden>
-          <img src={cover.src} alt={cover.alt ?? ''} style={{ aspectRatio: cover.aspectRatio ?? '16/9' } as any} />
+          <img src={cover.src} alt={cover.alt ?? ''} style={{ aspectRatio: cover.aspectRatio ?? '16/9' }} />
         </div>
       )}
     </header>
