@@ -42,10 +42,18 @@ const loadCachedDictionary = cache(async (locale: AppLocale, namespacesKey: stri
     namespaces.map(async (namespace) => [namespace, (await dictionaryLoaders[locale][namespace]()).default] as const)
   );
 
-  return entries.reduce<LoadedDictionary>((accumulator, [namespace, dictionary]) => {
-    accumulator[namespace] = dictionary;
-    return accumulator;
-  }, {});
+  const dictionary: LoadedDictionary = {};
+
+  for (const [namespace, namespaceDictionary] of entries) {
+    if (namespace === 'common') {
+      dictionary.common = namespaceDictionary as DictionarySchema['common'];
+      continue;
+    }
+
+    dictionary.home = namespaceDictionary as DictionarySchema['home'];
+  }
+
+  return dictionary;
 });
 
 export async function loadDictionary(

@@ -4,10 +4,18 @@ const tsParser = require('@typescript-eslint/parser');
 const reactPlugin = require('eslint-plugin-react');
 const unusedImports = require('eslint-plugin-unused-imports');
 const prettierConfig = require('eslint-config-prettier');
+const reactVersion = require('react/package.json').version;
 
 module.exports = [
   {
-    ignores: ['node_modules/**', '.next/**', 'public/**'],
+    ignores: ['node_modules/**', '.next/**', '**/.next/**', 'public/**'],
+  },
+  {
+    settings: {
+      react: {
+        version: reactVersion,
+      },
+    },
   },
   js.configs.recommended,
   ...tsPlugin.configs['flat/recommended'],
@@ -63,4 +71,3 @@ module.exports = [
   },
   prettierConfig,
 ];
-
