@@ -1,7 +1,7 @@
 import React from 'react';
 import clsx from 'clsx';
 import styles from './NextProjectNavigation.module.css';
-import type { Project } from '../ProjectCard/Component';
+import type { Project } from '../ProjectCard/types';
 
 export type NextProjectNavigationProps = React.ComponentPropsWithoutRef<'nav'> & {
   previous?: Project | null;

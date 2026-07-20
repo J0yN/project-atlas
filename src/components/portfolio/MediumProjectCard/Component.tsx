@@ -2,7 +2,7 @@ import React from 'react';
 import clsx from 'clsx';
 import styles from './MediumProjectCard.module.css';
 import { ProjectCard } from '../ProjectCard';
-import type { Project } from '../ProjectCard/Component';
+import type { Project } from '../ProjectCard/types';
 
 export type MediumProjectCardProps = React.ComponentPropsWithoutRef<'div'> & {
   project: Project;
