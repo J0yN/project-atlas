@@ -1,0 +1,50 @@
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  padding: 0.25rem 0.625rem;
+  border-radius: 9999px;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.badge::before {
+  content: '';
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: currentColor;
+  flex-shrink: 0;
+}
+
+/* Project statuses */
+.active {
+  background-color: color-mix(in srgb, var(--ds-color-success, #059669) 12%, transparent);
+  color: var(--ds-color-success, #059669);
+}
+
+.archived {
+  background-color: color-mix(in srgb, var(--ds-color-muted, #94a3b8) 12%, transparent);
+  color: var(--ds-color-muted, #94a3b8);
+}
+
+.draft {
+  background-color: color-mix(in srgb, var(--ds-color-warning, #d97706) 12%, transparent);
+  color: var(--ds-color-warning, #d97706);
+}
+
+/* Article statuses */
+.published {
+  background-color: color-mix(in srgb, var(--ds-color-success, #059669) 12%, transparent);
+  color: var(--ds-color-success, #059669);
+}
+
+.scheduled {
+  background-color: color-mix(in srgb, var(--ds-color-info, #4f46e5) 12%, transparent);
+  color: var(--ds-color-info, #4f46e5);
+}

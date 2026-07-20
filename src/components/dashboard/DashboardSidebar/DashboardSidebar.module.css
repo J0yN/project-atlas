@@ -1,0 +1,59 @@
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  width: 15rem;
+  min-width: 15rem;
+  height: 100vh;
+  position: sticky;
+  top: 0;
+  border-right: 1px solid var(--ds-color-border, #e2e8f0);
+  background-color: var(--ds-color-background, #ffffff);
+  overflow-y: auto;
+  padding: 0 0.75rem;
+  z-index: 30;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  padding: 1.25rem 0.75rem 1rem;
+  border-bottom: 1px solid var(--ds-color-border, #e2e8f0);
+  margin-bottom: 0.5rem;
+}
+
+.logo {
+  font-size: 1.25rem;
+  color: var(--ds-color-primary, #2563eb);
+  line-height: 1;
+}
+
+.brandName {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--ds-color-foreground, #0f172a);
+  letter-spacing: -0.01em;
+}
+
+.footer {
+  margin-top: auto;
+  padding: 1rem 0.75rem;
+  border-top: 1px solid var(--ds-color-border, #e2e8f0);
+}
+
+.version {
+  margin: 0;
+  font-size: 0.6875rem;
+  color: var(--ds-color-muted, #94a3b8);
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    transform: translateX(-100%);
+    transition: transform 0.25s ease;
+    box-shadow: 0 8px 24px rgba(2, 6, 23, 0.12);
+  }
+}

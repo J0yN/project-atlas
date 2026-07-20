@@ -1,0 +1,22 @@
+.titleCell {
+  display: flex;
+  flex-direction: column;
+  gap: 0.125rem;
+}
+
+.title {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--ds-color-foreground, #0f172a);
+}
+
+.slug {
+  font-size: 0.75rem;
+  color: var(--ds-color-muted, #94a3b8);
+  font-family: ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, monospace;
+}
+
+.category {
+  font-size: 0.8125rem;
+  color: var(--ds-color-foreground, #0f172a);
+}
