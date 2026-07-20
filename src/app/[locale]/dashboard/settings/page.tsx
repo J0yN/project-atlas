@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { isLocale } from '@/i18n/locales';
+import { i18nConfig } from '@/i18n/config';
 import { PageHeader } from '@/components/dashboard/PageHeader';
 import { ThemeSelector } from '@/components/dashboard/ThemeSelector';
 import { releaseInfo } from '@/config/release';
@@ -45,12 +46,12 @@ export default async function SettingsPage({
           </h2>
           <div className={styles.settingsList}>
             {[
-              { label: 'Site Name', value: 'Project Atlas', type: 'text' },
-              { label: 'Base URL', value: 'https://project-atlas.dev', type: 'url' },
-              { label: 'Default Locale', value: locale, type: 'text' },
-              { label: 'CMS Mode', value: 'Headless', type: 'text' },
-              { label: 'Release Version', value: releaseInfo.version, type: 'text' },
-              { label: 'Release Tag', value: releaseInfo.githubTag, type: 'text' }
+              { label: 'Site Name', value: 'Project Atlas' },
+              { label: 'Base URL', value: i18nConfig.baseUrl },
+              { label: 'Default Locale', value: locale },
+              { label: 'CMS Mode', value: 'Headless' },
+              { label: 'Release Version', value: releaseInfo.version },
+              { label: 'Release Tag', value: releaseInfo.githubTag }
             ].map((setting) => (
               <div key={setting.label} className={styles.settingRow}>
                 <span className={styles.settingLabel}>{setting.label}</span>
