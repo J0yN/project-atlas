@@ -6,6 +6,12 @@ Project Atlas is a production-ready portfolio and content platform built with Ne
 
 A modern Next.js application using the App Router and a src-first architecture.
 
+### Release Status
+
+- Current version: `1.0.0`
+- Sprint: `Sprint 18`
+- Milestone: `Production Release`
+
 ### Technology Stack
 
 - Next.js (App Router)
@@ -74,6 +80,8 @@ Additional documentation is available in the `docs/` directory:
 - Coding Standards
 - Design System
 - Deployment
+- QA Checklist
+- Release Notes
 - Roadmap
 
 ## Roadmap
@@ -93,7 +101,7 @@ Additional documentation is available in the `docs/` directory:
 - Internationalization
 - Dashboard
 - Optimization
-- Production Release
+- Production Release ✅
 
 ## Contributing
 
