@@ -2,9 +2,7 @@ import { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
   reactStrictMode: true,
-  experimental: {
-    appDir: true
-  }
+  poweredByHeader: false,
 };
 
 export default nextConfig;

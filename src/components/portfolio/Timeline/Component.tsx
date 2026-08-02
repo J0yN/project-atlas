@@ -3,7 +3,7 @@ import clsx from 'clsx';
 import styles from './Timeline.module.css';
 
 export type TimelineEvent = { id: string; date?: string; title: string; body?: string };
-export type TimelineProps = React.ComponentPropsWithoutRef<'div'> & {
+export type TimelineProps = React.ComponentPropsWithoutRef<'ol'> & {
   events: readonly TimelineEvent[];
 };
 

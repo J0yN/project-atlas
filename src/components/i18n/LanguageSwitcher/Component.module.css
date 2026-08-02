@@ -1,0 +1,46 @@
+.root {
+  display: grid;
+  gap: var(--ds-space-8, 0.5rem);
+}
+
+.label {
+  color: var(--ds-color-foreground, currentColor);
+  font-size: var(--ds-typography-small, 0.875rem);
+  font-weight: 600;
+}
+
+.field {
+  position: relative;
+}
+
+.select {
+  inline-size: 100%;
+  appearance: none;
+  padding-block: var(--ds-space-12, 0.75rem);
+  padding-inline: var(--ds-space-12, 0.75rem) var(--ds-space-32, 2rem);
+  border: 1px solid var(--ds-color-border, currentColor);
+  border-radius: var(--ds-radius-md, 0.5rem);
+  background: var(--ds-color-surface, transparent);
+  color: var(--ds-color-foreground, currentColor);
+  font: inherit;
+}
+
+.select:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px var(--ds-color-outline, rgba(0, 0, 0, 0.12));
+}
+
+.icon {
+  position: absolute;
+  inset-block-start: 50%;
+  inset-inline-end: var(--ds-space-12, 0.75rem);
+  transform: translateY(-50%);
+  color: var(--ds-color-muted, currentColor);
+  pointer-events: none;
+}
+
+.hint {
+  margin: 0;
+  color: var(--ds-color-muted, currentColor);
+  font-size: var(--ds-typography-small, 0.875rem);
+}

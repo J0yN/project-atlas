@@ -26,7 +26,7 @@ export const ArticleHero: React.FC<ArticleHeroProps> = ({ title, subtitle, date,
       </div>
       {cover && (
         <div className={styles.cover} aria-hidden>
-          <img src={cover.src} alt={cover.alt ?? ''} style={{ aspectRatio: cover.aspectRatio ?? '16/9' } as any} />
+          <img src={cover.src} alt={cover.alt ?? ''} style={{ aspectRatio: cover.aspectRatio ?? '16/9' }} />
         </div>
       )}
     </header>

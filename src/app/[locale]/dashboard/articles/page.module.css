@@ -1,0 +1,32 @@
+.titleCell {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  max-width: 28rem;
+}
+
+.title {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--ds-color-foreground, #0f172a);
+}
+
+.excerpt {
+  font-size: 0.75rem;
+  color: var(--ds-color-muted, #94a3b8);
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.category {
+  font-size: 0.8125rem;
+  color: var(--ds-color-foreground, #0f172a);
+}
+
+.readTime {
+  font-size: 0.8125rem;
+  color: var(--ds-color-muted, #94a3b8);
+  font-variant-numeric: tabular-nums;
+}

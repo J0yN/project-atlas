@@ -2,7 +2,7 @@ import React from 'react';
 import clsx from 'clsx';
 import styles from './FeaturedProjectCard.module.css';
 import { ProjectCard } from '../ProjectCard';
-import type { Project } from '../ProjectCard/Component';
+import type { Project } from '../ProjectCard/types';
 
 export type FeaturedProjectCardProps = React.ComponentPropsWithoutRef<'div'> & {
   project: Project;

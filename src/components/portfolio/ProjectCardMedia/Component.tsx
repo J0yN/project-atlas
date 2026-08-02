@@ -12,7 +12,7 @@ export type MediaProps = React.ComponentPropsWithoutRef<'div'> & {
 };
 
 export const ProjectCardMedia: React.FC<MediaProps> = ({ src, alt = '', width, height, aspectRatio, priority = false, className, ...rest }) => {
-  const style: React.CSSProperties | undefined = aspectRatio ? { ['--aspect-ratio' as any]: String(aspectRatio) } : undefined;
+  const style: (React.CSSProperties & Record<'--aspect-ratio', string>) | undefined = aspectRatio ? { '--aspect-ratio': String(aspectRatio) } : undefined;
   // Use native img with lazy loading; consumers may swap in Next/Image at higher level
   return (
     <div className={clsx(styles.root, className)} style={style} {...rest}>

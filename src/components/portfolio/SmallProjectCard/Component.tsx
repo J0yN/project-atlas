@@ -2,7 +2,7 @@ import React from 'react';
 import clsx from 'clsx';
 import styles from './SmallProjectCard.module.css';
 import { ProjectCard } from '../ProjectCard';
-import type { Project } from '../ProjectCard/Component';
+import type { Project } from '../ProjectCard/types';
 
 export type SmallProjectCardProps = React.ComponentPropsWithoutRef<'div'> & { project: Project };
 

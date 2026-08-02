@@ -6,20 +6,7 @@ import { ProjectCardContent } from '../ProjectCardContent';
 import { ProjectCardMeta } from '../ProjectCardMeta';
 import { ProjectCardTags } from '../ProjectCardTags';
 import { ProjectCardActions } from '../ProjectCardActions';
-
-export type Project = {
-  id: string;
-  slug?: string;
-  title: string;
-  description?: string;
-  image?: { src: string; alt?: string; width?: number; height?: number };
-  category?: string;
-  tags?: string[];
-  client?: string;
-  year?: number;
-  readingTime?: string;
-  featured?: boolean;
-};
+import type { Project } from './types';
 
 export type ProjectCardProps = React.ComponentPropsWithoutRef<'article'> & {
   project: Project;

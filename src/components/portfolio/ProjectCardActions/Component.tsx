@@ -2,7 +2,7 @@ import React from 'react';
 import clsx from 'clsx';
 import styles from './ProjectCardActions.module.css';
 import ButtonAdapter from '@/components/ui/ButtonAdapter';
-import type { Project } from '../ProjectCard/Component';
+import type { Project } from '../ProjectCard/types';
 
 export type ProjectCardActionsProps = React.ComponentPropsWithoutRef<'div'> & {
   project?: Project;

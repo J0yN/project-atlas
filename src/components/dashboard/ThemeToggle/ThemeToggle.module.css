@@ -1,0 +1,29 @@
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  border: 1px solid var(--ds-color-border, #e2e8f0);
+  border-radius: 0.5rem;
+  background-color: transparent;
+  color: var(--ds-color-foreground, #0f172a);
+  cursor: pointer;
+  transition: background-color 0.15s ease, border-color 0.15s ease;
+  flex-shrink: 0;
+}
+
+.button:hover {
+  background-color: var(--ds-color-surface, #f8fafc);
+  border-color: var(--ds-color-outline, #60a5fa);
+}
+
+.button:focus-visible {
+  outline: 2px solid var(--ds-color-outline, #60a5fa);
+  outline-offset: 2px;
+}
+
+.icon {
+  font-size: 0.875rem;
+  line-height: 1;
+}

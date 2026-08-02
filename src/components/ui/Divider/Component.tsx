@@ -1,6 +1,5 @@
 import React from 'react';
 import clsx from 'clsx';
-import { rem } from '@/design-system/utils/tokenHelpers';
 import type { SemanticColorKey } from '@/design-system/tokens/colors';
 
 export type DividerProps = React.ComponentPropsWithoutRef<'hr'> & {
@@ -28,15 +27,19 @@ export const Divider = React.forwardRef<HTMLHRElement, DividerProps>(({ orientat
     ...style
   };
 
-  const accessibilityProps: Partial<Record<string, string>> = decorative
-    ? { 'aria-hidden': 'true' }
-    : { role: 'separator' };
-
   if (isVertical) {
-    return <div ref={ref as unknown as React.Ref<HTMLDivElement>} className={clsx(className)} style={inlineStyle} {...(accessibilityProps as any)} {...rest} />;
+    const verticalAccessibilityProps = decorative
+      ? { 'aria-hidden': true }
+      : { role: 'separator' as const, 'aria-orientation': 'vertical' as const };
+
+    return <div ref={ref as unknown as React.Ref<HTMLDivElement>} className={clsx(className)} style={inlineStyle} {...verticalAccessibilityProps} {...rest} />;
   }
 
-  return <hr ref={ref} className={clsx(className)} style={inlineStyle} {...(accessibilityProps as any)} {...rest} />;
+  const horizontalAccessibilityProps = decorative
+    ? { 'aria-hidden': true }
+    : { role: 'separator' as const };
+
+  return <hr ref={ref} className={clsx(className)} style={inlineStyle} {...horizontalAccessibilityProps} {...rest} />;
 });
 
 Divider.displayName = 'Divider';
