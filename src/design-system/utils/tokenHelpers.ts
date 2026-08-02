@@ -12,11 +12,12 @@ export function px(value: number | string): string {
 
 /**
  * Convert a pixel value to rem assuming 16px base.
- * @param pxValue pixel value
+ * @param pxValue pixel value as number or css string (e.g. '16px')
  */
-export function rem(pxValue: number): string {
+export function rem(pxValue: number | string): string {
   const base = 16;
-  return `${pxValue / base}rem`;
+  const numeric = typeof pxValue === 'string' ? parseFloat(pxValue) : pxValue;
+  return `${numeric / base}rem`;
 }
 
 /**

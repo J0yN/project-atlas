@@ -1,6 +1,5 @@
 import React from 'react';
 import clsx from 'clsx';
-import { rem } from '@/design-system/utils/tokenHelpers';
 import type { SemanticColorKey } from '@/design-system/tokens/colors';
 
 export type DividerProps = React.ComponentPropsWithoutRef<'hr'> & {
