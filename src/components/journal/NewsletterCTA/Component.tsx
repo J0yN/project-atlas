@@ -20,7 +20,7 @@ export const NewsletterCTA: React.FC<NewsletterCTAProps> = ({ heading = 'Subscri
     try {
       await onSubscribe?.(email);
       setMessage('Subscribed');
-    } catch (err) {
+    } catch {
       setMessage('Subscription failed');
     } finally {
       setLoading(false);
