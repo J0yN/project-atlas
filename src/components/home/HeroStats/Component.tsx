@@ -1,7 +1,7 @@
 import React from 'react';
 import clsx from 'clsx';
 import styles from './HeroStats.module.css';
-import { spacing, typography } from '@/design-system/tokens';
+import { spacing } from '@/design-system/tokens';
 import { rem } from '@/design-system/utils/tokenHelpers';
 
 export type Stat = {

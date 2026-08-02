@@ -11,6 +11,7 @@ node_modules
 .vscode
 coverage
 *.log
+tsconfig.tsbuildinfo
 
 # Local env overrides
 .env
