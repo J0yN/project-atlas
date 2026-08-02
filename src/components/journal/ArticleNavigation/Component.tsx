@@ -1,7 +1,6 @@
 import React from 'react';
 import clsx from 'clsx';
 import styles from './ArticleNavigation.module.css';
-import type { Project } from '@/components/portfolio/ProjectCard/Component';
 
 export type ArticleNavigationProps = React.ComponentPropsWithoutRef<'nav'> & {
   previous?: { title: string; href: string } | null;
