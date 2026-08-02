@@ -8,8 +8,7 @@ export type ProjectCardContentProps = React.ComponentPropsWithoutRef<'div'> & {
   slug?: string;
 };
 
-export const ProjectCardContent: React.FC<ProjectCardContentProps> = ({ title, description, slug, className, ...rest }) => {
-  // slug can be used by the consumer to wrap title with Link
+export const ProjectCardContent: React.FC<ProjectCardContentProps> = ({ title, description, slug: _slug, className, ...rest }) => {
   return (
     <div className={clsx(styles.root, className)} {...rest}>
       <h3 className={styles.title}>{title}</h3>
