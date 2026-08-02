@@ -80,5 +80,4 @@ export const MobileNavigation = React.forwardRef<HTMLDivElement, MobileNavigatio
 );
 
 MobileNavigation.displayName = 'MobileNavigation';
-export { MobileNavigation };
 export default MobileNavigation;
