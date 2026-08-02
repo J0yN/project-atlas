@@ -74,6 +74,4 @@ export const Hero: React.FC<HeroProps> = ({
     </header>
   );
 };
-
-export { Hero };
 export default Hero;

@@ -2,9 +2,14 @@
 import React, { useEffect, useRef } from 'react';
 import clsx from 'clsx';
 import styles from './MobileNavigation.module.css';
-import type { NavItem } from '../FloatingNavigation/types';
 import ButtonAdapter from '@/components/ui/ButtonAdapter';
 import { Container } from '@/components/ui';
+
+type NavItem = {
+  id?: string;
+  label: string;
+  href: string;
+};
 
 export type MobileNavigationProps = React.ComponentPropsWithoutRef<'div'> & {
   items?: readonly NavItem[];
@@ -80,5 +85,4 @@ export const MobileNavigation = React.forwardRef<HTMLDivElement, MobileNavigatio
 );
 
 MobileNavigation.displayName = 'MobileNavigation';
-export { MobileNavigation };
 export default MobileNavigation;
